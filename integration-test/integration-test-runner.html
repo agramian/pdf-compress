@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link href="https://unpkg.com/mocha@5.2.0/mocha.css" rel="stylesheet" />
+</head>
+<body>
+<div id="mocha"></div>
+
+<script src="https://unpkg.com/chai/chai.js"></script>
+<script src="https://unpkg.com/mocha@5.2.0/mocha.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script type="module" src="../node_modules/pdfjs-dist/build/pdf.js"></script>
+
+<script>mocha.setup('bdd')</script>
+<script type="module" src="integration-tests.js"></script>
+<script type="module">
+  mocha.checkLeaks();
+  mocha.run();
+</script>
+</body>
+</html>
